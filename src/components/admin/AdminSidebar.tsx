@@ -22,16 +22,13 @@ import {
 
 const navigationItems = [
   { title: "Dashboard", url: "/admin", icon: Home },
-  { title: "Bundles", url: "/admin/bundles", icon: Package },
-  { title: "Courses", url: "/admin/courses", icon: GraduationCap },
+  { title: "Certifications", url: "/admin/certifications", icon: Package },
   { title: "Modules", url: "/admin/modules", icon: FolderOpen },
   { title: "Chapters", url: "/admin/chapters", icon: Video },
 ];
 
 const quickActions = [
-  { title: "Add Bundle", url: "/admin/bundles/create", icon: Plus },
-  { title: "Add Course", url: "/admin/courses/create", icon: Plus },
-  { title: "Add Chapter", url: "/admin/chapters/create", icon: Plus },
+  { title: "Add Certification", url: "/admin/certifications/create", icon: Plus },
 ];
 
 export function AdminSidebar() {
