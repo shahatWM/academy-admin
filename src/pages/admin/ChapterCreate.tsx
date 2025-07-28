@@ -28,19 +28,24 @@ const ChapterCreate = () => {
   const [videoFile, setVideoFile] = useState<File | null>(null);
 
   // Mock data - replace with actual data fetching
-  const courses = [
-    { id: "1", title: "HTML & CSS Fundamentals" },
-    { id: "2", title: "JavaScript Programming" },
-    { id: "3", title: "React Fundamentals" },
+  const certifications = [
+    { id: "1", title: "Web Development Fundamentals" },
+    { id: "2", title: "Advanced JavaScript Programming" },
+    { id: "3", title: "Full Stack Development" },
   ];
 
   const modules = selectedCourse === "1" ? [
-    { id: "1", title: "HTML Basics" },
-    { id: "2", title: "CSS Styling" },
-    { id: "3", title: "Advanced CSS" },
+    { id: "1", title: "HTML & CSS Basics" },
+    { id: "2", title: "CSS Advanced Styling" },
+    { id: "3", title: "Responsive Design" },
   ] : selectedCourse === "2" ? [
-    { id: "4", title: "JavaScript Basics" },
-    { id: "5", title: "DOM Manipulation" },
+    { id: "4", title: "JavaScript Core Concepts" },
+    { id: "5", title: "DOM Manipulation & Events" },
+    { id: "6", title: "Asynchronous JavaScript" },
+  ] : selectedCourse === "3" ? [
+    { id: "7", title: "Frontend Frameworks" },
+    { id: "8", title: "Backend APIs" },
+    { id: "9", title: "Database Integration" },
   ] : [];
 
   const addTag = () => {
@@ -84,7 +89,7 @@ const ChapterCreate = () => {
     }
     
     if (!selectedCourse) {
-      toast.error("Please select a course");
+      toast.error("Please select a certification");
       return;
     }
     
@@ -266,24 +271,24 @@ const ChapterCreate = () => {
             </Card>
           </div>
 
-          {/* Course & Module Selection */}
+          {/* Module Assignment */}
           <div className="space-y-6">
             <Card>
               <CardHeader>
-                <CardTitle>Course Assignment</CardTitle>
-                <CardDescription>Assign this chapter to a course and module</CardDescription>
+                <CardTitle>Module Assignment</CardTitle>
+                <CardDescription>Assign this chapter to a certification and module</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="space-y-2">
-                  <Label>Course</Label>
+                  <Label>Certification</Label>
                   <Select value={selectedCourse} onValueChange={setSelectedCourse}>
                     <SelectTrigger>
-                      <SelectValue placeholder="Select a course" />
+                      <SelectValue placeholder="Select a certification" />
                     </SelectTrigger>
                     <SelectContent>
-                      {courses.map((course) => (
-                        <SelectItem key={course.id} value={course.id}>
-                          {course.title}
+                      {certifications.map((cert) => (
+                        <SelectItem key={cert.id} value={cert.id}>
+                          {cert.title}
                         </SelectItem>
                       ))}
                     </SelectContent>

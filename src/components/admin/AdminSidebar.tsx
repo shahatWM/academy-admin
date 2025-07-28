@@ -29,6 +29,8 @@ const navigationItems = [
 
 const quickActions = [
   { title: "Add Certification", url: "/admin/certifications/create", icon: Plus },
+  { title: "Add Module", url: "/admin/modules/create", icon: Plus },
+  { title: "Add Chapter", url: "/admin/chapters/create", icon: Plus },
 ];
 
 export function AdminSidebar() {

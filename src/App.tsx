@@ -10,6 +10,7 @@ import AdminDashboard from "./pages/admin/AdminDashboard";
 import CertificationsList from "./pages/admin/CertificationsList";
 import CertificationCreate from "./pages/admin/CertificationCreate";
 import ModulesList from "./pages/admin/ModulesList";
+import ModuleCreate from "./pages/admin/ModuleCreate";
 import ChaptersList from "./pages/admin/ChaptersList";
 import ChapterCreate from "./pages/admin/ChapterCreate";
 
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/admin/certifications" element={<AdminLayout><CertificationsList /></AdminLayout>} />
           <Route path="/admin/certifications/create" element={<AdminLayout><CertificationCreate /></AdminLayout>} />
           <Route path="/admin/modules" element={<AdminLayout><ModulesList /></AdminLayout>} />
+          <Route path="/admin/modules/create" element={<AdminLayout><ModuleCreate /></AdminLayout>} />
           <Route path="/admin/chapters" element={<AdminLayout><ChaptersList /></AdminLayout>} />
           <Route path="/admin/chapters/create" element={<AdminLayout><ChapterCreate /></AdminLayout>} />
           
